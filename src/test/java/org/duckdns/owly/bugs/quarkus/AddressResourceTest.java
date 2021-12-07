@@ -17,6 +17,12 @@ public class AddressResourceTest {
           .then()
              .statusCode(200)
              .body(is("Disney Land, Gate 1"));
+
+        given()
+                .when().get("/person/1")
+                .then()
+                .statusCode(200)
+                .body(is("Donald Duck 1"));
     }
 
     @Test
@@ -26,5 +32,11 @@ public class AddressResourceTest {
                 .then()
                 .statusCode(200)
                 .body(containsString("- Address Resource"));
+
+        given()
+                .when().get("/q/openapi")
+                .then()
+                .statusCode(200)
+                .body(containsString("- Person Resource"));
     }
 }

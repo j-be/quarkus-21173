@@ -15,11 +15,12 @@ Download and open (or display in browser) [http://localhost:8080/q/openapi](http
 
 ## Expected
 
-The operation in path `/adress` carry the `Address Resource` tag.
+* The operation in path `/adress` carry the `Address Resource` tag.
+* The operation in path `/person` carry the `Person Resource` tag.
 
 ## Actual
 
-The operation in path `/adress` carry the `Abstract Rest Resource` tag.
+All operations are tagged with the same tag (it does not seem to be deterministic which one).
 
 # Unit Test
 
