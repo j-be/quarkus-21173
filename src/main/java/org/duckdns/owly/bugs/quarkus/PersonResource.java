@@ -3,9 +3,9 @@ package org.duckdns.owly.bugs.quarkus;
 import javax.ws.rs.Path;
 
 @Path("/person")
-public class PersonResource implements AbstractRestResource<String> {
+public class PersonResource extends AbstractRestResourceImpl {
     @Override
-    public String getById(long id) {
-        return "Donald Duck " + id;
+    public String getPrefix() {
+        return "Donald Duck";
     }
 }

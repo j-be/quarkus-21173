@@ -3,9 +3,9 @@ package org.duckdns.owly.bugs.quarkus;
 import javax.ws.rs.Path;
 
 @Path("/address")
-public class AddressResource implements AbstractRestResource<String> {
+public class AddressResource extends AbstractRestResourceImpl {
     @Override
-    public String getById(long id) {
-        return "Disney Land, Gate " + id;
+    protected String getPrefix() {
+        return "Disney Land, Gate";
     }
 }
